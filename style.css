@@ -1,0 +1,167 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(235, 21%, 11%);
+    color: white;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 18px;
+}
+
+header, main, footer {
+    width: 100vw;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 300;
+}
+
+header {
+    height: 200px;
+    padding: 40px;
+    background: url("./images/bg-mobile-dark.jpg") no-repeat center;
+    background-size: cover;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+header > div > h1 {
+    letter-spacing: 10px;
+}
+
+header > div > img {
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transform: translateY(-80px);
+}
+
+form {
+    width: 90%;
+}
+
+fieldset {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    min-height: 40px;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+}
+
+fieldset button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid hsl(234, 39%, 85%);
+    cursor: pointer;
+}
+
+fieldset input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+#listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 15px;
+    border: none;
+    min-width: 90%;
+    min-height: 40px;
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 5px;
+    padding: 0;
+    list-style: none;
+}
+
+#listContainer h2 {
+    margin: 10px 0;
+}
+
+#listContainer button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid hsl(234, 39%, 85%);
+    cursor: pointer;
+}
+
+.itemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+    padding: 15px;
+    border-bottom: 1px solid hsl(233, 14%, 35%);
+
+}
+
+.itemContainer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+p.checked {
+    text-decoration: line-through;
+    color: hsl(233, 14%, 35%);
+}
+
+button.checked {
+    background: url("./images/icon-check.svg") no-repeat center, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    background-size: auto;
+}
+
+.deleteButton {
+    border: none !important;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}
