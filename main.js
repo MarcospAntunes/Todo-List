@@ -3,6 +3,7 @@ import checkTask from "./script/checkTask.js";
 import filter from "./script/filter.js";
 import deleteTask from "./script/deleteTask.js";
 import printTasks from "./script/printTasks.js";
+import changeTheme from "./script/changeTheme.js";
 
 const form = document.querySelector("form").addEventListener("submit", e => e.preventDefault());
 const btnAddItem = document.querySelector("#addItem");
@@ -10,6 +11,7 @@ const listContainer = document.querySelector("#listContainer");
 const input = document.querySelector("#createTodo");
 const listh2 = document.querySelector("#listh2");
 const filterAll = document.querySelector(".all");
+const btnTheme = document.querySelector(".btntheme");
 let all = [];
 
 if(sessionStorage.hasOwnProperty("item")) {
@@ -40,4 +42,8 @@ document.addEventListener("click", (e) => {
 
 filterAll.addEventListener(("click"), (e) => {
     filter(e.target.classList[1]);
+})
+
+btnTheme.addEventListener("click", () => {
+    changeTheme(btnTheme);
 })

@@ -1,0 +1,29 @@
+.light header {
+    background-image: url("./images/bg-mobile-light.jpg");
+    color: white;
+}
+
+.light {
+    background-color: hsl(236, 33%, 92%);
+    color: black;
+}
+
+.light fieldset, .light #listContainer {
+    background-color: hsl(0, 0%, 98%);
+}
+
+.light fieldset input {
+    color: black;
+}
+
+.light .itemContainer {
+    border-bottom-color: hsl(236, 33%, 92%);
+}
+
+.light p.checked {
+    color: hsl(236, 9%, 61%);
+}
+
+.light #filterContainer {
+    background-color: hsl(0, 0%, 98%);
+}
