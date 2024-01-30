@@ -6,15 +6,26 @@ function printTasks(listh2, listContainer) {
         listContainer.innerHTML = ""
         all = JSON.parse(sessionStorage.getItem("item"));
         all.map((item) => {
-            listContainer.innerHTML += `
-                <li id=${String(item.id)} class="itemContainer ${item.noFilter} ${item.status}">
-                    <div>
-                        <button class="checkButton"></button>
-                        <p>${item.taskName}</p>
-                    </div>
-                    <button class="deleteButton"><img src="images/icon-cross.svg" alt="delete" class="deleteButton"></button>
-                </li>
-            `
+            item.status !== "completed" ?
+                listContainer.innerHTML += `
+                    <li id=${String(item.id)} class="itemContainer ${item.noFilter} ${item.status}">
+                        <div>
+                            <button class="checkButton"></button>
+                            <p>${item.taskName}</p>
+                        </div>
+                        <button class="deleteButton"><img src="images/icon-cross.svg" alt="delete" class="deleteButton"></button>
+                    </li>
+                `
+            :
+                listContainer.innerHTML += `
+                    <li id=${String(item.id)} class="itemContainer ${item.noFilter} ${item.status}">
+                        <div>
+                            <button class="checkButton checked"></button>
+                            <p class="checked">${item.taskName}</p>
+                        </div>
+                        <button class="deleteButton"><img src="images/icon-cross.svg" alt="delete" class="deleteButton"></button>
+                    </li>
+                `
         })
     } else {
         listh2.style.display = "block";

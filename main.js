@@ -32,7 +32,7 @@ document.addEventListener("click", (e) => {
     if (!itemList) return;
 
     if (target.classList.contains("checkButton")) {
-        checkTask(target, itemList, itemContainer);
+        checkTask(target, itemList, itemContainer, listh2, listContainer);
     }
 
     if (target.classList.contains("deleteButton")) {
