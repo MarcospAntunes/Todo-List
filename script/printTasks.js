@@ -1,11 +1,9 @@
-function printTasks(listh2, listContainer) {
-    let all = sessionStorage.hasOwnProperty("item") ? JSON.parse(sessionStorage.getItem("item")) : [];
+function printTasks(list, listh2, listContainer) {
 
-    if(sessionStorage.hasOwnProperty("item") && all.length > 0) {
+    if(sessionStorage.hasOwnProperty("item") && list.length > 0) {
         listh2.style.display = "none";
         listContainer.innerHTML = ""
-        all = JSON.parse(sessionStorage.getItem("item"));
-        all.map((item) => {
+        list.map((item) => {
             item.status !== "completed" ?
                 listContainer.innerHTML += `
                     <li id=${String(item.id)} class="itemContainer ${item.noFilter} ${item.status}">

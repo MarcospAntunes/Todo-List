@@ -14,7 +14,7 @@ function addItem(input, listh2, listContainer) {
 
         input.value = "";
         
-        printTasks(listh2, listContainer)
+        printTasks(all, listh2, listContainer)
     } else {
         input.value = "Digite o nome da tarefa!";
     }

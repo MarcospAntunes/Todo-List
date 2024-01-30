@@ -10,7 +10,7 @@ const btnAddItem = document.querySelector("#addItem");
 const listContainer = document.querySelector("#listContainer");
 const input = document.querySelector("#createTodo");
 const listh2 = document.querySelector("#listh2");
-const filterAll = document.querySelector(".all");
+const btnFilter = document.querySelectorAll(".filter");
 const btnTheme = document.querySelector(".btntheme");
 let all = [];
 
@@ -18,7 +18,7 @@ if(sessionStorage.hasOwnProperty("item")) {
     all = JSON.parse(sessionStorage.getItem("item"));
 }
 
-printTasks(listh2, listContainer);
+printTasks(all, listh2, listContainer);
 
 btnAddItem.addEventListener("click", () => {
     addItem(input, listh2, listContainer);
@@ -40,8 +40,10 @@ document.addEventListener("click", (e) => {
     }
 })
 
-filterAll.addEventListener(("click"), (e) => {
-    filter(e.target.classList[1]);
+btnFilter.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+        filter(e.target, listContainer, listh2, btnFilter)
+    })
 })
 
 btnTheme.addEventListener("click", () => {

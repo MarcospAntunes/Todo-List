@@ -24,7 +24,7 @@ function checkTask(target, itemList, itemContainer, listh2, listContainer) {
     
     
     sessionStorage.setItem("item", JSON.stringify(all));
-    printTasks(listh2, listContainer)
+    printTasks(all, listh2, listContainer)
 }
 
 export default checkTask;

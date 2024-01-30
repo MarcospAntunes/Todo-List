@@ -6,7 +6,7 @@ function deleteTask(itemList, listh2, listContainer) {
     itemList.remove();
     sessionStorage.setItem("item", JSON.stringify(all.filter((item) => item.id != itemList.id)))
     all = JSON.parse(sessionStorage.getItem("item"));
-    printTasks(listh2, listContainer);
+    printTasks(all, listh2, listContainer);
 }
 
 export default deleteTask;
