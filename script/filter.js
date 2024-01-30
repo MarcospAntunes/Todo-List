@@ -13,10 +13,11 @@ function filter(target, listContainer, listh2, btnFilter) {
         let filtred = all.filter((item) => item.status === target.classList[1])
         target.classList.add("selected")
         sessionStorage.setItem(`${target.classList[1]}`, JSON.stringify(filtred));
+        listh2.children[0].innerText = "No item"
         printTasks(
-            sessionStorage.hasOwnProperty(`${target.classList[1]}`) && sessionStorage.getItem(`${target.classList[1]}`).length > 2? 
+            sessionStorage.hasOwnProperty(`${target.classList[1]}`) && sessionStorage.getItem(`${target.classList[1]}`).length > 0? 
                 JSON.parse(sessionStorage.getItem(`${target.classList[1]}`)) 
-                : all, 
+                : [], 
             listh2,
             listContainer
         )
@@ -24,6 +25,7 @@ function filter(target, listContainer, listh2, btnFilter) {
         printTasks(all, listh2, listContainer)
         target.classList.add("selected")
     }
+    
 }
 
 export default filter;

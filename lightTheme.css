@@ -27,3 +27,13 @@
 .light #filterContainer {
     background-color: hsl(0, 0%, 98%);
 }
+
+.light a {
+    color: black;
+}
+
+@media screen and (min-width: 1281px){
+    .light header {
+        background-image: url("./images/bg-desktop-light.jpg");
+    }
+}

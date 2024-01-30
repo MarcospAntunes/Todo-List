@@ -26,6 +26,7 @@ function printTasks(list, listh2, listContainer) {
                 `
         })
     } else {
+        listContainer.innerHTML = ""
         listh2.style.display = "block";
         listContainer.appendChild(listh2)
     }

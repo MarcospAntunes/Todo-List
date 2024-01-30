@@ -31,9 +31,9 @@ p {
 }
 
 header {
-    height: 200px;
+    height: 250px;
     padding: 40px;
-    background: url("./images/bg-mobile-dark.jpg") no-repeat center;
+    background: url("./images/bg-mobile-dark.jpg") no-repeat;
     background-size: cover;
 }
 
@@ -58,7 +58,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    transform: translateY(-80px);
+    transform: translateY(-110px);
 }
 
 form {
@@ -216,6 +216,7 @@ footer a {
 @media screen and (min-width: 1281px){
     header {
         background-image: url("./images/bg-desktop-dark.jpg");
+        height: 300px;
     }
 
     header div {
