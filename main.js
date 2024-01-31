@@ -14,16 +14,17 @@ const listh2 = document.querySelector("#listh2");
 const btnFilter = document.querySelectorAll(".filter");
 const btnTheme = document.querySelector(".btntheme");
 const btnClear = document.querySelector("#clear");
+const itemCounter = document.querySelector("#itemCounter");
 let all = [];
 
 if(sessionStorage.hasOwnProperty("item")) {
     all = JSON.parse(sessionStorage.getItem("item"));
 }
 
-printTasks(all, listh2, listContainer);
+printTasks(all, listh2, listContainer, itemCounter);
 
 btnAddItem.addEventListener("click", () => {
-    addItem(input, listh2, listContainer);
+    addItem(input, listh2, listContainer, itemCounter);
 })
 
 document.addEventListener("click", (e) => {
@@ -34,22 +35,22 @@ document.addEventListener("click", (e) => {
     if (!itemList) return;
 
     if (target.classList.contains("checkButton")) {
-        checkTask(target, itemList, itemContainer, listh2, listContainer);
+        checkTask(target, itemList, itemContainer, listh2, listContainer, itemCounter);
     }
 
     if (target.classList.contains("deleteButton")) {
-        deleteTask(itemList, listh2, listContainer);
+        deleteTask(itemList, listh2, listContainer, itemCounter);
     }
 })
 
 btnFilter.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-        filter(e.target, listContainer, listh2, btnFilter)
+        filter(e.target, listContainer, listh2, btnFilter, itemCounter)
     })
 })
 
 btnClear.addEventListener("click", () => {
-    clearAll(listh2, listContainer);
+    clearAll(listh2, listContainer, itemCounter);
 })
 
 btnTheme.addEventListener("click", () => {

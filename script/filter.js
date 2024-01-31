@@ -1,6 +1,6 @@
 import printTasks from "./printTasks.js";
 
-function filter(target, listContainer, listh2, btnFilter) {
+function filter(target, listContainer, listh2, btnFilter, itemCounter) {
     let all = sessionStorage.hasOwnProperty("item") ? JSON.parse(sessionStorage.getItem("item")) : [];
     
     btnFilter.forEach(btn => {
@@ -19,10 +19,11 @@ function filter(target, listContainer, listh2, btnFilter) {
                 JSON.parse(sessionStorage.getItem(`${target.classList[1]}`)) 
                 : [], 
             listh2,
-            listContainer
+            listContainer,
+            itemCounter
         )
     } else {
-        printTasks(all, listh2, listContainer)
+        printTasks(all, listh2, listContainer, itemCounter)
         target.classList.add("selected")
     }
     

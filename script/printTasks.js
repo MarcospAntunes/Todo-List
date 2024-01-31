@@ -1,4 +1,6 @@
-function printTasks(list, listh2, listContainer) {
+import counter from "./counter.js";
+
+function printTasks(list, listh2, listContainer, itemCounter) {
 
     if(sessionStorage.hasOwnProperty("item") && list.length > 0) {
         listh2.style.display = "none";
@@ -30,6 +32,8 @@ function printTasks(list, listh2, listContainer) {
         listh2.style.display = "block";
         listContainer.appendChild(listh2)
     }
+
+    counter(itemCounter);
 }
 
 export default printTasks;

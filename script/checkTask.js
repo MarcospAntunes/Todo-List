@@ -1,6 +1,6 @@
 import printTasks from "./printTasks.js";
 
-function checkTask(target, itemList, itemContainer, listh2, listContainer) {
+function checkTask(target, itemList, itemContainer, listh2, listContainer, itemCounter) {
     let all = sessionStorage.hasOwnProperty("item") ? JSON.parse(sessionStorage.getItem("item")) : [];
 
     const item = all.filter((item) => item.id == itemList.id)
@@ -24,7 +24,7 @@ function checkTask(target, itemList, itemContainer, listh2, listContainer) {
     
     
     sessionStorage.setItem("item", JSON.stringify(all));
-    printTasks(all, listh2, listContainer)
+    printTasks(all, listh2, listContainer, itemCounter)
 }
 
 export default checkTask;

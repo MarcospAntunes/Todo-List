@@ -1,6 +1,6 @@
 import printTasks from "./printTasks.js";
 
-function addItem(input, listh2, listContainer) {
+function addItem(input, listh2, listContainer, itemCounter) {
     let all = sessionStorage.hasOwnProperty("item") ? JSON.parse(sessionStorage.getItem("item")) : [];
 
     if(input.value != "") {
@@ -14,7 +14,7 @@ function addItem(input, listh2, listContainer) {
 
         input.value = "";
         
-        printTasks(all, listh2, listContainer)
+        printTasks(all, listh2, listContainer, itemCounter)
     } else {
         input.value = "Digite o nome da tarefa!";
     }
