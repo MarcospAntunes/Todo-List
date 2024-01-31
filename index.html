@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="google" content="notranslate" />
+  <meta http-equiv="Content-Language" content="en_US" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./lightTheme.css">
   <title>Frontend Mentor | Todo app</title>
 </head>
-<body>
+<body class="notranslate">
   <header>
     <div>
       <h1>TODO</h1>
@@ -30,10 +32,14 @@
               <h2>Lest do this!</h2>
             </li>
           </ul>
-          <div id="filterContainer">
-            <button class="filter all selected">All</button>
-            <button class="filter active">Active</button>
-            <button class="filter completed">Completed</button>
+          <div id="listControlsContainer">
+            <p>0 items left</p>
+            <div id="filterContainer">
+              <button class="filter all selected">All</button>
+              <button class="filter active">Active</button>
+              <button class="filter completed">Completed</button>
+            </div>
+            <button id="clear">Clear completed</button>
           </div>
         </div>
         

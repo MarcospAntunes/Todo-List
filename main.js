@@ -4,6 +4,7 @@ import filter from "./script/filter.js";
 import deleteTask from "./script/deleteTask.js";
 import printTasks from "./script/printTasks.js";
 import changeTheme from "./script/changeTheme.js";
+import clearAll from "./script/clearAll.js";
 
 const form = document.querySelector("form").addEventListener("submit", e => e.preventDefault());
 const btnAddItem = document.querySelector("#addItem");
@@ -12,6 +13,7 @@ const input = document.querySelector("#createTodo");
 const listh2 = document.querySelector("#listh2");
 const btnFilter = document.querySelectorAll(".filter");
 const btnTheme = document.querySelector(".btntheme");
+const btnClear = document.querySelector("#clear");
 let all = [];
 
 if(sessionStorage.hasOwnProperty("item")) {
@@ -44,6 +46,10 @@ btnFilter.forEach((btn) => {
     btn.addEventListener("click", (e) => {
         filter(e.target, listContainer, listh2, btnFilter)
     })
+})
+
+btnClear.addEventListener("click", () => {
+    clearAll(listh2, listContainer);
 })
 
 btnTheme.addEventListener("click", () => {
