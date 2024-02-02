@@ -27,19 +27,26 @@
         </fieldset>
       </form>
         <div id="container">
-          <ul id="listContainer">
-            <li id="listh2">
-              <h2>Lest do this!</h2>
-            </li>
-          </ul>
+          <div id="containerMobile">
+            <ul id="listContainer">
+              <li id="listh2">
+                <h2>Lest do this!</h2>
+              </li>
+            </ul>
+            
+            <div id="listControlsContainerMobile">
+              <p class="itemCounter mobile">0 items left</p>
+              <button class="clear mobile">Clear completed</button>
+            </div>
+          </div>
           <div id="listControlsContainer">
-            <p id="itemCounter">0 items left</p>
+            <p class="itemCounter desktop">0 items left</p>
             <div id="filterContainer">
               <button class="filter all selected">All</button>
               <button class="filter active">Active</button>
               <button class="filter completed">Completed</button>
             </div>
-            <button id="clear">Clear completed</button>
+            <button class="clear desktop">Clear completed</button>
           </div>
         </div>
         

@@ -28,6 +28,10 @@
     background-color: hsl(0, 0%, 98%);
 }
 
+.light #listControlsContainerMobile {
+    background-color: hsl(0, 0%, 98%);
+}
+
 .light a {
     color: black;
 }

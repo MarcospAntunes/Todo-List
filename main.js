@@ -13,8 +13,8 @@ const input = document.querySelector("#createTodo");
 const listh2 = document.querySelector("#listh2");
 const btnFilter = document.querySelectorAll(".filter");
 const btnTheme = document.querySelector(".btntheme");
-const btnClear = document.querySelector("#clear");
-const itemCounter = document.querySelector("#itemCounter");
+const btnClear = document.querySelectorAll(".clear");
+const itemCounter = document.querySelectorAll(".itemCounter");
 let all = [];
 
 if(sessionStorage.hasOwnProperty("item")) {
@@ -49,9 +49,13 @@ btnFilter.forEach((btn) => {
     })
 })
 
-btnClear.addEventListener("click", () => {
-    clearAll(listh2, listContainer, itemCounter);
+btnClear.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        clearAll(listh2, listContainer, itemCounter)
+    })
 })
+
+
 
 btnTheme.addEventListener("click", () => {
     changeTheme(btnTheme);
