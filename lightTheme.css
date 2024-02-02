@@ -20,6 +20,10 @@
     border-bottom-color: hsl(236, 33%, 92%);
 }
 
+.light #listContainer button {
+    background-color: hsl(0, 0%, 98%);
+}
+
 .light p.checked {
     color: hsl(236, 9%, 61%);
 }

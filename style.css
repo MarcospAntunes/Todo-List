@@ -134,10 +134,11 @@ fieldset input {
 }
 
 #listContainer button {
+    position: relative;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: transparent;
+    background-color: hsl(235, 24%, 19%);
     border: 1px solid hsl(234, 39%, 85%);
     cursor: pointer;
 }
@@ -150,7 +151,7 @@ fieldset input {
     min-height: 40px;
     padding: 15px;
     border-bottom: 1px solid hsl(233, 14%, 35%);
-
+    z-index: 1;
 }
 
 .itemContainer div {
@@ -160,12 +161,27 @@ fieldset input {
     gap: 20px;
 }
 
+.checkButton::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: -0.8px;
+    border-radius: 50%;
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    z-index: -1;
+}
+
+.checkButton:hover {
+    border: none !important;
+}
+
 p.checked {
     text-decoration: line-through;
     color: hsl(233, 14%, 35%);
 }
 
 button.checked {
+    border: none !important;
     background: url("./images/icon-check.svg") no-repeat center, linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     background-size: auto;
 }
