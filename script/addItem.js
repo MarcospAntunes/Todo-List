@@ -9,12 +9,13 @@ function addItem(input, listh2, listContainer, itemCounter) {
             noFilter: "all",
             status: "active",
             taskName: input.value
-        })
+        });
+
         sessionStorage.setItem("item", JSON.stringify(all));
 
         input.value = "";
         
-        printTasks(all, listh2, listContainer, itemCounter)
+        printTasks(all, listh2, listContainer, itemCounter);
     } else {
         input.value = "Digite o nome da tarefa!";
     }

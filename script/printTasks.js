@@ -4,7 +4,8 @@ function printTasks(list, listh2, listContainer, itemCounter) {
 
     if(sessionStorage.hasOwnProperty("item") && list.length > 0) {
         listh2.style.display = "none";
-        listContainer.innerHTML = ""
+        listContainer.innerHTML = "";
+
         list.map((item) => {
             item.status !== "completed" ?
                 listContainer.innerHTML += `
@@ -28,9 +29,9 @@ function printTasks(list, listh2, listContainer, itemCounter) {
                 `
         })
     } else {
-        listContainer.innerHTML = ""
+        listContainer.innerHTML = "";
         listh2.style.display = "block";
-        listContainer.appendChild(listh2)
+        listContainer.appendChild(listh2);
     }
 
     counter(itemCounter);

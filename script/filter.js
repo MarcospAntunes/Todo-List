@@ -5,15 +5,18 @@ function filter(target, listContainer, listh2, btnFilter, itemCounter) {
     
     btnFilter.forEach(btn => {
         if(btn.classList.contains("selected") && btn !== target) {
-            btn.classList.remove("selected")
+            btn.classList.remove("selected");
         }
     });
 
     if(target.classList[1] !== "all") {
-        let filtred = all.filter((item) => item.status === target.classList[1])
-        target.classList.add("selected")
+        let filtred = all.filter((item) => item.status === target.classList[1]);
+
+        target.classList.add("selected");
+
         sessionStorage.setItem(`${target.classList[1]}`, JSON.stringify(filtred));
-        listh2.children[0].innerText = "No item"
+        listh2.children[0].innerText = "No item";
+
         printTasks(
             sessionStorage.hasOwnProperty(`${target.classList[1]}`) && sessionStorage.getItem(`${target.classList[1]}`).length > 0? 
                 JSON.parse(sessionStorage.getItem(`${target.classList[1]}`)) 
@@ -21,10 +24,10 @@ function filter(target, listContainer, listh2, btnFilter, itemCounter) {
             listh2,
             listContainer,
             itemCounter
-        )
+        );
     } else {
-        printTasks(all, listh2, listContainer, itemCounter)
-        target.classList.add("selected")
+        printTasks(all, listh2, listContainer, itemCounter);
+        target.classList.add("selected");
     }
     
 }

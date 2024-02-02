@@ -45,13 +45,13 @@ document.addEventListener("click", (e) => {
 
 btnFilter.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-        filter(e.target, listContainer, listh2, btnFilter, itemCounter)
+        filter(e.target, listContainer, listh2, btnFilter, itemCounter);
     })
 })
 
 btnClear.forEach((btn) => {
     btn.addEventListener("click", () => {
-        clearAll(listh2, listContainer, itemCounter)
+        clearAll(listh2, listContainer, itemCounter);
     })
 })
 
